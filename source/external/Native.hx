@@ -2,17 +2,13 @@ package external;
 
 class Native
 {
-	/**
-	 * Attempts to retrieve the actual task memory used by the application
-	 * 
-	 * Will fallback on `0.0` if it is not supported.
-	 */
-	public static function getTaskMemory()
-	{
-		#if cpp
-		return external.memory.Memory.getCurrentUsage();
-		#else
-		return 0.0;
-		#end
-	}
+    public static function getTaskMemory():Float
+    {
+        #if cpp
+        var bytes:cpp.Float64 = external.memory.Memory.getCurrentUsage();
+        return bytes;
+        #else
+        return 0.0;
+        #end
+    }
 }

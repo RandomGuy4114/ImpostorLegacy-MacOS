@@ -22,7 +22,7 @@
 	<!-- ____________________________ Window Settings ___________________________ -->
 
 	<!--These window settings apply to all targets-->
-	<window width="1280" height="720" fps="60" background="#000000" hardware="true" vsync="false" allow-high-dpi="true" />
+    <window width="1280" height="720" fps="60" background="#000000" hardware="true" vsync="false" allow-high-dpi="false" />
 
 	<!--Desktop-specific-->
 	<window if="desktop" orientation="landscape" fullscreen="false" resizable="true" vsync="false"/>
@@ -167,4 +167,5 @@
 	<icon path="projFiles/icon/icon32.png" size='32'/>
 	<icon path="projFiles/icon/icon64.png" size='64'/>
 	<icon path="projFiles/icon/iconOG.png" />
+    <haxedef name="FLXANIMATE_NO_RENDER_TEXTURE" />
 </project>
